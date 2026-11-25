@@ -11,23 +11,59 @@
 </head>
 <body>
 
-  <!-- BARRA DE NAVEGACIÓN -->
-  <header class="header">
-    <div class="container header-flex">
-      <a href="#inicio" class="logo-box">
-        <img src="IMAGENES/logo.png" alt="Logo Fútbol y Más Fútbol" class="logo-img" />
-        <span class="logo-name">FÚTBOL Y MÁS FÚTBOL</span>
+
+<!-- BARRA DE NAVEGACIÓN -->
+<header class="header">
+  <div class="container header-flex">
+
+    <a href="#inicio" class="logo-box">
+      <img src="IMAGENES/logo.png"
+           alt="Logo Fútbol y Más Fútbol"
+           class="logo-img" />
+
+      <span class="logo-name">
+        FÚTBOL Y MÁS FÚTBOL
+      </span>
+    </a>
+
+    <!-- BOTÓN HAMBURGUESA -->
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      aria-controls="mainNav"
+      type="button">
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+    <!-- NAVEGACIÓN -->
+    <nav class="nav" id="mainNav">
+
+      <a href="#inicio">Inicio</a>
+
+      <a href="#nosotros">Nosotros</a>
+
+      <a href="#agenda">Agenda Deportiva</a>
+
+      <a href="#noticias-futbol">
+        Fútbol Colombiano
       </a>
 
-      <nav class="nav">
-        <a href="#inicio">Inicio</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#agenda">Agenda Deportiva</a>
-        <a href="#noticias-futbol">Fútbol Colombiano</a>
-        <a href="#noticias-futbol" data-jump-cat="mundial">Fútbol Mundial</a>
-      </nav>
-    </div>
-  </header>
+      <a href="#noticias-futbol"
+         data-jump-cat="mundial">
+        Fútbol Mundial
+      </a>
+
+    </nav>
+
+  </div>
+</header>
+
 
   <!-- SECCIÓN 1: INICIO CON BANNER DE IMÁGENES MOVIBLES -->
   <section id="inicio" class="banner-slider">
@@ -484,8 +520,63 @@
       filterNews('all');
     });
     document.querySelector('[data-jump-cat="mundial"]').addEventListener('click', () => filterNews('mundial'));
+
+
+// 4. MENU HAMBURGUESA
+
+const menuToggle = document.getElementById('menuToggle');
+const mainNav = document.getElementById('mainNav');
+
+menuToggle.addEventListener('click', () => {
+
+    const abierto = mainNav.classList.toggle('is-open');
+
+    menuToggle.classList.toggle('active', abierto);
+
+    menuToggle.setAttribute('aria-expanded', abierto);
+
+    menuToggle.setAttribute(
+        'aria-label',
+        abierto ? 'Cerrar menú' : 'Abrir menú'
+    );
+
+});
+
+// Cerrar menú al seleccionar una opción
+
+mainNav.querySelectorAll('a').forEach(link => {
+
+    link.addEventListener('click', () => {
+
+        mainNav.classList.remove('is-open');
+        menuToggle.classList.remove('active');
+
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Abrir menú');
+
+    });
+
+});
+
+// Cerrar menú al presionar Escape
+
+document.addEventListener('keydown', (event) => {
+
+    if (event.key === 'Escape') {
+
+        mainNav.classList.remove('is-open');
+        menuToggle.classList.remove('active');
+
+        menuToggle.setAttribute('aria-expanded', 'false');
+
+    }
+
+});
+
   </script>
 
 </body>
 </html>
+
+
 
