@@ -35,13 +35,15 @@
       <span></span>
     </button>
 
-    <!-- NAVEGACIÓN -->
-    <nav class="nav" id="mainNav">
+  
+   <!-- NAVEGACIÓN -->
+   <nav class="nav" id="mainNav">
       <a href="#inicio">Inicio</a>
-      <a href="#nosotros">Nosotros</a>
       <a href="#agenda">Agenda Deportiva</a>
       <a href="#noticias-futbol">Fútbol Colombiano</a>
-      <a href="#noticias-futbol" data-jump-cat="mundial">Opinion</a>
+      <a href="#junior-fc">Junior FC</a>
+      <a href="#opinion">Opinión</a>
+       <a href="#contacto">Contacto</a>
     </nav>
 
   </div>
@@ -94,51 +96,7 @@
   </div>
 </section>
 
-<!-- SECCIÓN 2: NOSOTROS -->
-<section id="nosotros" class="section-nosotros">
-  <div class="container nosotros-grid">
-    <div>
-      <span class="tag-red">NOSOTROS</span>
-      <h2>PASIÓN POR EL FÚTBOL, ANÁLISIS SIN FILTROS</h2>
-      <p>
-        En <strong>Fútbol y Más Fútbol</strong> vivimos cada jornada con información clara, resúmenes al instante y seguimiento cercano tanto al balompié colombiano como a las grandes competiciones del mundo.
-      </p>
-      <p>
-        Nacimos con la idea de construir un punto de encuentro para los hinchas que disfrutan debatir de táctica, resultados, figuras emergentes y todo lo que rodea el deporte más lindo del planeta.
-      </p>
 
-      <div class="nosotros-highlights">
-        <div class="highlight-item">
-          <strong>100%</strong>
-          <span>Pasión y debate futbolero</span>
-        </div>
-        <div class="highlight-item">
-          <strong>Nacional e Int.</strong>
-          <span>Cobertura fecha a fecha</span>
-        </div>
-        <div class="highlight-item">
-          <strong>Comunidad</strong>
-          <span>Hecho para verdaderos hinchas</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="nosotros-box">
-      <div>
-        <strong>🇨🇴 Fútbol Colombiano</strong>
-        <span>Liga BetPlay, Copa, torneos locales y seguimiento a la Selección Colombia en cada convocatoria.</span>
-      </div>
-      <div>
-        <strong>🌍 Fútbol Mundial</strong>
-        <span>Champions League, LaLiga, Premier League, eliminatorias y las grandes figuras del panorama internacional.</span>
-      </div>
-      <div>
-        <strong>🎙️ Nuestro Enfoque</strong>
-        <span>Noticias puntuales, análisis directo y contenido pensado para compartir y comentar en comunidad.</span>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- SECCIÓN 3: AGENDA DEPORTIVA EN TIEMPO REAL -->
 <section id="agenda" class="agenda-section">
@@ -161,131 +119,426 @@
   </div>
 </section>
 
+
 <!-- SECCIÓN 4: NOTICIAS DE FÚTBOL COLOMBIANO -->
 <section id="noticias-futbol" class="news-section">
   <div class="container">
+
+    <!-- ENCABEZADO -->
     <div class="news-header">
-      <div>
+      <div class="header-titles">
         <span class="tag-red">FÚTBOL COLOMBIANO</span>
-        <h2>Noticias y actualidad de Colombia</h2>
+        <h2>Noticias y actualidad del FPC</h2>
       </div>
-      <a href="#noticias-futbol" class="view-all" id="resetFilter">Ver todas &rarr;</a>
+      <a href="#noticias-futbol" class="view-all">Ver todas &rarr;</a>
     </div>
 
-    <div class="news-tabs">
-      <button type="button" class="tab-btn active" data-filter="all">Todas</button>
-      <button type="button" class="tab-btn" data-filter="colombiano">Liga BetPlay</button>
-      <button type="button" class="tab-btn" data-filter="seleccion">Junior De Barranquilla</button>
-    </div>
-
+    <!-- GRILLA DE 4 NOTICIAS -->
     <div class="news-grid" id="newsGrid">
+
       <!-- TARJETA 1 -->
-      <article class="news-card" data-category="colombiano">
+      <article class="news-card">
         <div class="news-img-wrap">
-          <span class="pill-badge">Fútbol Colombiano</span>
-          <img src="IMAGENES/nacional.jpg" alt="Liga BetPlay" onerror="this.src='IMAGENES/NACIONAL.jpg'">
+          <span class="pill-badge badge-liga">Liga BetPlay</span>
+          <img src="IMAGENES/nacional.jpg" alt="Clásico Paisa Liga BetPlay" loading="lazy" onerror="this.src='IMAGENES/NACIONAL.jpg'">
         </div>
         <div class="news-content">
           <span class="news-date">24 nov. 2026</span>
-          <h3>NACIONA GANO EL CLASICO PAISA 3-1  Y ES LIDER DEL GRUPO A</h3>
-          <p>Repasamos los resultados de la jornada, los equipos clasificados y los duelos directos en la parte alta de la tabla...</p>
+          <h3>Nacional ganó el Clásico Paisa 3-1 y es líder del Grupo A</h3>
+          <p>Repasamos los resultados de la jornada, los equipos clasificados y los duelos directos en la parte alta de la tabla de cuadrangulares...</p>
           <a href="#" class="read-more">Leer noticia &rarr;</a>
         </div>
       </article>
 
       <!-- TARJETA 2 -->
-      <article class="news-card" data-category="colombiano">
+      <article class="news-card">
         <div class="news-img-wrap">
-          <span class="pill-badge">Fútbol Colombiano</span>
-          <img src="IMAGENES/noticia2.jpg" alt="Clásicos del FPC" onerror="this.src='IMAGENES/millonarios.jpg'">
+          <span class="pill-badge badge-liga">Liga BetPlay</span>
+          <img src="IMAGENES/noticia2.jpg" alt="Millonarios vs Bucaramanga" loading="lazy" onerror="this.src='IMAGENES/millonarios.jpg'">
         </div>
         <div class="news-content">
           <span class="news-date">23 nov. 2026</span>
-          <h3>MILLONARIOS NO TUVO PIEDAD Y GOLEO AL BUCARAMANGA EN EL CAMPIN </h3>
-          <p>Con este triunfo, Millonarios llega a 4 puntos y es líder del Grupo B. Bucaramanga queda último con 1 punto....</p>
+          <h3>Millonarios no tuvo piedad y goleó al Bucaramanga en El Campín</h3>
+          <p>Con este triunfo, el conjunto embajador llega a 4 puntos y lidera el Grupo B. Bucaramanga queda en el fondo con 1 punto...</p>
           <a href="#" class="read-more">Leer noticia &rarr;</a>
         </div>
       </article>
 
       <!-- TARJETA 3 -->
-      <article class="news-card" data-category="seleccion">
+      <article class="news-card">
         <div class="news-img-wrap">
-          <span class="pill-badge">Selección Colombia</span>
-          <img src="IMAGENES/noticia3.jpg" alt="Selección Colombia" onerror="this.src='IMAGENES/LOGO GRANDE ESPALDA.jpg'">
+          <span class="pill-badge badge-seleccion">Liga BetPlay</span>
+          <img src="IMAGENES/noticia3.jpg" alt="Selección Colombia" loading="lazy" onerror="this.src='IMAGENES/cali.jpg'">
         </div>
         <div class="news-content">
           <span class="news-date">21 nov. 2026</span>
-          <h3>ACTUALIDAD DE LOS REFERENTES DE LA SELECCIÓN COLOMBIA</h3>
+          <h3>Actualidad de los referentes de la Selección Colombia</h3>
           <p>Seguimiento al presente de los convocados y figuras de la Tricolor en sus clubes y en el radar del cuerpo técnico...</p>
           <a href="#" class="read-more">Leer noticia &rarr;</a>
         </div>
       </article>
 
       <!-- TARJETA 4 -->
-      <article class="news-card" data-category="colombiano">
+      <article class="news-card">
         <div class="news-img-wrap">
-          <span class="pill-badge">Fútbol Colombiano</span>
-          <img src="IMAGENES/noticia4.jpg" alt="Tabla y cuadrangulares" onerror="this.src='IMAGENES/LOGO GRANDE ESPALDA.jpg'">
+          <span class="pill-badge badge-junior">Liga BetPlay</span>
+          <img src="IMAGENES/noticia4.jpg" alt="Junior de Barranquilla" loading="lazy" onerror="this.src='IMAGENES/santa fe.jpg'">
         </div>
         <div class="news-content">
           <span class="news-date">19 nov. 2026</span>
-          <h3>PULSO AL ROJO VIVO EN LA PELEA POR LOS PRIMEROS LUGARES</h3>
+          <h3>Pulso al rojo vivo en la pelea por los primeros lugares</h3>
           <p>Analizamos cómo marcha la lucha punto a punto en el campeonato colombiano tras una fecha decisiva...</p>
           <a href="#" class="read-more">Leer noticia &rarr;</a>
         </div>
       </article>
 
-      <!-- TARJETA 5 -->
-      <article class="news-card" data-category="colombiano">
-        <div class="news-img-wrap">
-          <span class="pill-badge">Fútbol Colombiano</span>
-          <img src="IMAGENES/noticia5.jpg" alt="Goleadores del FPC" onerror="this.src='IMAGENES/LOGO GRANDE ESPALDA.jpg'">
-        </div>
-        <div class="news-content">
-          <span class="news-date">17 nov. 2026</span>
-          <h3>LOS GOLEADORES Y FIGURAS DEL SEMESTRE EN COLOMBIA</h3>
-          <p>Conoce quiénes lideran la tabla de artilleros y qué jugadores vienen marcando diferencia en cada estadio del país...</p>
-          <a href="#" class="read-more">Leer noticia &rarr;</a>
-        </div>
-      </article>
+      
 
-      <!-- TARJETA 6 -->
-      <article class="news-card" data-category="colombiano">
-        <div class="news-img-wrap">
-          <span class="pill-badge">Fútbol Colombiano</span>
-          <img src="IMAGENES/noticia6.jpg" alt="Novedades de clubes en Colombia" onerror="this.src='IMAGENES/LOGO GRANDE ESPALDA.jpg'">
-        </div>
-        <div class="news-content">
-          <span class="news-date">15 nov. 2026</span>
-          <h3>NOVEDADES, TÉCNICOS Y MOVIMIENTOS EN LOS CLUBES DE COLOMBIA</h3>
-          <p>Repasamos las noticias administrativas, renovaciones y preparativos de los equipos colombianos...</p>
-          <a href="#" class="read-more">Leer noticia &rarr;</a>
-        </div>
-      </article>
     </div>
 
+    <!-- PIE / CONTADOR -->
     <div class="news-pagination">
-      <span id="newsCount">1 - 6 de 6</span>
+      <span id="newsCount">1 - 4 de 4</span>
       <div class="page-controls">
-        <button type="button" disabled>|&lt;</button>
-        <button type="button" disabled>&lt;</button>
-        <button type="button" disabled>&gt;</button>
-        <button type="button" disabled>&gt;|</button>
+        <button type="button" disabled aria-label="Primera página">|&lt;</button>
+        <button type="button" disabled aria-label="Anterior">&lt;</button>
+        <button type="button" disabled aria-label="Siguiente">&gt;</button>
+        <button type="button" disabled aria-label="Última página">&gt;|</button>
       </div>
     </div>
+
+  </div>
+</section>
+
+
+
+<<!-- SECCIÓN 4: NOTICIAS DEL JUNIOR FC -->
+<section id="junior-fc" class="news-section">
+  <div class="container">
+
+    <!-- ENCABEZADO -->
+    <div class="news-header">
+      <div class="header-titles">
+        <span class="tag-red">Junior FC</span>
+        <h2>Noticias y actualidad del Junior FC</h2>
+      </div>
+      <a href="#junior-fc" class="view-all">Ver todas &rarr;</a>
+    </div>
+
+    <!-- GRILLA DE 4 NOTICIAS -->
+    <div class="news-grid" id="newsGrid">
+
+      <!-- TARJETA 1 -->
+      <article class="news-card">
+        <div class="news-img-wrap">
+          <span class="pill-badge badge-liga">Junior de Barranquilla</span>
+          <img src="IMAGENES/junio_entrenamientor.jpg" alt="Clásico Paisa Liga BetPlay" loading="lazy" onerror="this.src='IMAGENES/junio_entrenamientor.jpg'">
+        </div>
+        <div class="news-content">
+          <span class="news-date">24 nov. 2026</span>
+          <h3>Nacional ganó el Clásico Paisa 3-1 y es líder del Grupo A</h3>
+          <p>Repasamos los resultados de la jornada, los equipos clasificados y los duelos directos en la parte alta de la tabla de cuadrangulares...</p>
+          <a href="#" class="read-more">Leer noticia &rarr;</a>
+        </div>
+      </article>
+
+      <!-- TARJETA 2 -->
+      <article class="news-card">
+        <div class="news-img-wrap">
+          <span class="pill-badge badge-liga">Junior de Barranquilla</span>
+          <img src="IMAGENES/noticia2.jpg" alt="Millonarios vs Bucaramanga" loading="lazy" onerror="this.src='IMAGENES/junior_juvenil.jpg'">
+        </div>
+        <div class="news-content">
+          <span class="news-date">23 nov. 2026</span>
+          <h3>Millonarios no tuvo piedad y goleó al Bucaramanga en El Campín</h3>
+          <p>Con este triunfo, el conjunto embajador llega a 4 puntos y lidera el Grupo B. Bucaramanga queda en el fondo con 1 punto...</p>
+          <a href="#" class="read-more">Leer noticia &rarr;</a>
+        </div>
+      </article>
+
+      <!-- TARJETA 3 -->
+      <article class="news-card">
+        <div class="news-img-wrap">
+          <span class="pill-badge badge-seleccion">Junior de Barranquilla</span>
+          <img src="IMAGENES/noticia3.jpg" alt="Selección Colombia" loading="lazy" onerror="this.src='IMAGENES/teo.jpg'">
+        </div>
+        <div class="news-content">
+          <span class="news-date">21 nov. 2026</span>
+          <h3>Actualidad de los referentes de la Selección Colombia</h3>
+          <p>Seguimiento al presente de los convocados y figuras de la Tricolor en sus clubes y en el radar del cuerpo técnico...</p>
+          <a href="#" class="read-more">Leer noticia &rarr;</a>
+        </div>
+      </article>
+
+      <!-- TARJETA 4 -->
+      <article class="news-card">
+        <div class="news-img-wrap">
+          <span class="pill-badge badge-junior">Junior de Barranquilla</span>
+          <img src="IMAGENES/noticia4.jpg" alt="Junior de Barranquilla" loading="lazy" onerror="this.src='IMAGENES/jorge_bava.jpg'">
+        </div>
+        <div class="news-content">
+          <span class="news-date">19 nov. 2026</span>
+          <h3>Pulso al rojo vivo en la pelea por los primeros lugares</h3>
+          <p>Analizamos cómo marcha la lucha punto a punto en el campeonato colombiano tras una fecha decisiva...</p>
+          <a href="#" class="read-more">Leer noticia &rarr;</a>
+        </div>
+      </article>
+
+      
+
+    </div>
+
+    <!-- PIE / CONTADOR -->
+    <div class="news-pagination">
+      <span id="newsCount">1 - 4 de 4</span>
+      <div class="page-controls">
+        <button type="button" disabled aria-label="Primera página">|&lt;</button>
+        <button type="button" disabled aria-label="Anterior">&lt;</button>
+        <button type="button" disabled aria-label="Siguiente">&gt;</button>
+        <button type="button" disabled aria-label="Última página">&gt;|</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECCIÓN 6: OPINIÓN / COLUMNA EDITORIAL -->
+<section id="opinion" class="opinion-section">
+  <div class="container">
+
+    <!-- ENCABEZADO -->
+    <div class="opinion-header">
+      <div>
+        <span class="tag-red">OPINIÓN &amp; ANÁLISIS</span>
+        <h2>La Columna de Fútbol y Más Fútbol</h2>
+      </div>
+      <span class="opinion-edition">Edición Semanal &bull; Noviembre 2026</span>
+    </div>
+
+    <!-- CONTENIDO EDITORIAL -->
+    <div class="opinion-layout">
+
+      <!-- COLUMNA PRINCIPAL -->
+      <article class="opinion-main-card">
+        <div class="author-box">
+          <img src="IMAGENES/logo.png" alt="Autor de la columna" class="author-avatar" onerror="this.src='IMAGENES/LOGO-GRANDE-ESPALDA.jpg'">
+          <div class="author-info">
+            <span class="author-role">COLUMNA EDITORIAL</span>
+            <strong>Redacción Fútbol y Más Fútbol</strong>
+            <span class="opinion-date">26 nov. 2026 &bull; 4 min de lectura</span>
+          </div>
+        </div>
+
+        <h3 class="opinion-title">El nuevo Metropolitano y la deuda futbolística: por qué la infraestructura debe ir de la mano con el juego</h3>
+
+        <blockquote class="opinion-quote">
+          “Tener un estadio de primer nivel es un orgullo para Barranquilla y para Colombia, pero la verdadera fiesta se sostiene cuando el espectáculo en la cancha está a la altura de la tribuna.”
+        </blockquote>
+
+        <div class="opinion-body">
+          <p>
+            Barranquilla vuelve a estar en el centro de la conversación continental. Las obras en el estadio Metropolitano y el ambiente que se vive en cada jornada demuestran que la plaza responde con creces cuando hay eventos de talla internacional.
+          </p>
+          <p>
+            Sin embargo, en el fútbol colombiano persiste una tarea pendiente: sostener procesos deportivos serios, evitar los cambios abruptos de rumbo cada semestre y apostar por ideas de juego claras que enamoren al hincha más allá de un resultado aislado.
+          </p>
+          <p>
+            El aficionado que llena las gradas ya cumple su parte. Ahora el reto está en los escritorios y en el terreno de juego para que el nivel competitivo de nuestros clubes esté a la altura de los mejores escenarios del continente.
+          </p>
+        </div>
+
+        <div class="opinion-footer">
+          <span class="opinion-tag">#FPC</span>
+          <span class="opinion-tag">#JuniorFC</span>
+          <span class="opinion-tag">#Barranquilla</span>
+        </div>
+      </article>
+
+      <!-- COLUMNAS LATERALES / OTRAS VOCES -->
+      <aside class="opinion-sidebar">
+        <h4 class="sidebar-heading">Otras columnas</h4>
+
+        <article class="opinion-mini-card">
+          <span class="mini-kicker">LIGA BETPLAY</span>
+          <h5>Cuadrangulares sin margen de error: el que pestañea pierde la final</h5>
+          <p>Un análisis sobre cómo la diferencia de gol y los puntos invisibles vuelven a definir los grupos...</p>
+          <span class="mini-meta">Por Redacción &bull; 23 nov. 2026</span>
+        </article>
+
+        <article class="opinion-mini-card">
+          <span class="mini-kicker">SELECCIÓN COLOMBIA</span>
+          <h5>El recambio generacional que pide pista en la Tricolor</h5>
+          <p>Los nombres jóvenes que vienen pidiendo minutos y competencia interna en cada convocatoria...</p>
+          <span class="mini-meta">Por Redacción &bull; 20 nov. 2026</span>
+        </article>
+
+        <article class="opinion-mini-card">
+          <span class="mini-kicker">FÚTBOL MUNDIAL</span>
+          <h5>Calendarios saturados: ¿hasta cuándo aguanta el físico del futbolista?</h5>
+          <p>Entre ligas locales, copas continentales y fechas FIFA, las lesiones musculares siguen en aumento...</p>
+          <span class="mini-meta">Por Redacción &bull; 17 nov. 2026</span>
+        </article>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN 7: CONTACTO -->
+<section id="contacto" class="contact-section">
+  <div class="container">
+
+    <!-- ENCABEZADO -->
+    <div class="contact-header">
+      <span class="tag-red">CONTACTO DIRECTO</span>
+      <h2>Escríbenos a Fútbol y Más Fútbol</h2>
+      <p>¿Tienes información deportiva, propuestas, colaboraciones o sugerencias para el canal? Envíanos un mensaje directo a nuestro correo.</p>
+    </div>
+
+    <div class="contact-layout">
+      <!-- INFORMACIÓN DEL CANAL -->
+      <div class="contact-info-card">
+        <h3>Canales oficiales</h3>
+        <p class="contact-info-desc">
+          Estamos atentos a los mensajes de la comunidad futbolera en Barranquilla y todo el país.
+        </p>
+
+        <div class="contact-item">
+          <span class="contact-label">CORREO ELECTRÓNICO</span>
+          <strong>futbolymasfutbol2026@gmail.com</strong>
+          <small>Cambia este correo por el tuyo real en el formulario</small>
+        </div>
+
+        <div class="contact-item">
+          <span class="contact-label">UBICACIÓN</span>
+          <strong>Barranquilla, Atlántico — Colombia</strong>
+        </div>
+
+        <div class="contact-item">
+          <span class="contact-label">FACEBOOK OFICIAL</span>
+          <a href="https://www.facebook.com/futbolymasfutbolbq" target="_blank" rel="noopener noreferrer">
+            facebook.com/futbolymasfutbolbq &rarr;
+          </a>
+        </div>
+      </div>
+
+      <!-- FORMULARIO DE CORREO -->
+      <form
+        class="contact-form"
+        id="contactForm"
+        action="https://formsubmit.co/futbolymasfutbol2026@gmail.com"
+        method="POST">
+
+        <!-- Configuraciones opcionales de FormSubmit -->
+        <input type="hidden" name="_subject" value="Nuevo mensaje desde Fútbol y Más Fútbol">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre">Nombre completo *</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+          </div>
+
+          <div class="form-group">
+            <label for="correo">Tu correo electrónico *</label>
+            <input type="email" id="correo" name="email" placeholder="correo@ejemplo.com" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="asunto">Asunto</label>
+          <select id="asunto" name="asunto">
+            <option value="Información o noticia">Información o noticia</option>
+            <option value="Junior FC / Fútbol Colombiano">Junior FC / Fútbol Colombiano</option>
+            <option value="Pauta o colaboración">Pauta o colaboración</option>
+            <option value="Sugerencia o comentario">Sugerencia o comentario</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="mensaje">Mensaje *</label>
+          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe aquí tu mensaje..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-enviar" id="btnEnviar">
+          Enviar mensaje por correo &rarr;
+        </button>
+
+        <div class="form-status" id="formStatus" aria-live="polite" hidden></div>
+
+        <p class="form-status" id="formStatus" aria-live="polite"></p>
+
+        <input type="hidden" name="_replyto" id="replytoField">
+      </form>
+    </div>
+
   </div>
 </section>
 
 <!-- PIE DE PÁGINA -->
 <footer class="footer">
-  <div class="container footer-flex">
-    <p>© 2026 Fútbol y Más Fútbol. Todos los derechos reservados.</p>
-    <div class="social-links">
-      <a href="#">Facebook</a>
-      <a href="#">YouTube</a>
-      <a href="#">Instagram</a>
-      <a href="#">TikTok</a>
+  <div class="container">
+
+    <div class="footer-grid">
+      <!-- COLUMNA 1: MARCA Y REDES -->
+      <div class="footer-brand">
+        <a href="#inicio" class="footer-logo">
+          <img src="IMAGENES/logo.png" alt="Logo Fútbol y Más Fútbol" onerror="this.style.display='none'">
+          <span>FÚTBOL Y MÁS FÚTBOL</span>
+        </a>
+        <p class="footer-desc">
+          Pasión por el fútbol, resultados en tiempo real, noticias del FPC, Junior FC y análisis sin filtros desde Barranquilla para toda la hinchada.
+        </p>
+
+        <div class="social-links" aria-label="Redes sociales">
+          <a href="https://www.facebook.com/futbolymasfutbolbq" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M13.5 22v-8.2h2.8l.4-3.2h-3.2V8.5c0-.9.3-1.6 1.6-1.6h1.7V4.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.4H7.5v3.2h2.7V22h3.3z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@futbolymasfutbol-w9x" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31.3 31.3 0 0 0 .5 12c0 1.6.2 3.2.5 4.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.3-1.6.5-3.2.5-4.8s-.2-3.2-.5-4.8zM9.7 15.2V8.8L15.5 12l-5.8 3.2z"/></svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.3 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .3-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4a3.9 3.9 0 0 1-1.4-.9 3.9 3.9 0 0 1-.9-1.4c-.2-.4-.3-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.3 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 3.6a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-10.5a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8z"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@fymf2026" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="TikTok">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M16.6 5.8A4.3 4.3 0 0 1 15.3 3h-3.1v12.4a2.6 2.6 0 1 1-1.8-2.5V9.7a5.8 5.8 0 1 0 5 5.7V9.1a7.3 7.3 0 0 0 4.3 1.4V7.4a4.3 4.3 0 0 1-3.1-1.6z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- COLUMNA 2: SECCIONES -->
+      <div class="footer-col">
+        <h4>Secciones</h4>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#agenda">Agenda Deportiva</a></li>
+          <li><a href="#noticias-futbol">Fútbol Colombiano</a></li>
+          <li><a href="#junior-fc">Junior FC</a></li>
+          <li><a href="#opinion">Opinión</a></li>
+        </ul>
+      </div>
+
+      <!-- COLUMNA 3: COBERTURA -->
+      <div class="footer-col">
+        <h4>Cobertura</h4>
+        <ul>
+          <li><a href="#noticias-futbol">Liga BetPlay Dimayor</a></li>
+          <li><a href="#junior-fc">Junior de Barranquilla</a></li>
+          <li><a href="#noticias-futbol">Selección Colombia</a></li>
+          <li><a href="#agenda">Champions &amp; Torneos UEFA</a></li>
+          <li><a href="#agenda">Copa Libertadores y Sudamericana</a></li>
+        </ul>
+      </div>
     </div>
+
+    <!-- BARRA INFERIOR -->
+    <div class="footer-bottom">
+      <p>&copy; 2026 <strong>Fútbol y Más Fútbol</strong>. Todos los derechos reservados.</p>
+      <a href="#inicio" class="back-to-top">Volver arriba &uarr;</a>
+    </div>
+
   </div>
 </footer>
 
@@ -298,6 +551,7 @@
   let currentIndex = 0;
 
   function goToSlide(index) {
+    if (!slides || totalSlides === 0) return;
     if (index < 0) index = totalSlides - 1;
     if (index >= totalSlides) index = 0;
     currentIndex = index;
@@ -306,10 +560,12 @@
     dots[currentIndex].classList.add('active');
   }
 
-  document.getElementById('prevSlide').addEventListener('click', () => goToSlide(currentIndex - 1));
-  document.getElementById('nextSlide').addEventListener('click', () => goToSlide(currentIndex + 1));
+  const prevSlideBtn = document.getElementById('prevSlide');
+  const nextSlideBtn = document.getElementById('nextSlide');
+  if (prevSlideBtn) prevSlideBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+  if (nextSlideBtn) nextSlideBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
   dots.forEach(dot => dot.addEventListener('click', () => goToSlide(Number(dot.dataset.index))));
-  setInterval(() => goToSlide(currentIndex + 1), 5000);
+  if (totalSlides > 0) setInterval(() => goToSlide(currentIndex + 1), 5000);
 
   // 2. AGENDA DEPORTIVA EN TIEMPO REAL (ESPN API PÚBLICA)
   const contenedor = document.getElementById('lista-partidos');
@@ -464,7 +720,7 @@
   cargarAgendaReal();
   setInterval(cargarAgendaReal, 60000);
 
-  // 3. FILTROS DE NOTICIAS
+  // 3. FILTROS DE NOTICIAS (SOLO SI EXISTEN EN EL HTML)
   const tabBtns = document.querySelectorAll('.tab-btn');
   const cards = document.querySelectorAll('.news-card');
   const newsCount = document.getElementById('newsCount');
@@ -477,44 +733,125 @@
       card.style.display = show ? 'flex' : 'none';
       if (show) visible++;
     });
-    newsCount.textContent = `1 - ${visible} de ${visible}`;
+    if (newsCount) newsCount.textContent = `1 - ${visible} de ${visible}`;
   }
 
-  tabBtns.forEach(btn => btn.addEventListener('click', () => filterNews(btn.dataset.filter)));
-  document.getElementById('resetFilter').addEventListener('click', (e) => {
-    e.preventDefault();
-    filterNews('all');
-  });
-  document.querySelector('[data-jump-cat="mundial"]').addEventListener('click', () => filterNews('mundial'));
+  if (tabBtns.length > 0) {
+    tabBtns.forEach(btn => btn.addEventListener('click', () => filterNews(btn.dataset.filter)));
+  }
+
+  const resetFilterBtn = document.getElementById('resetFilter');
+  if (resetFilterBtn) {
+    resetFilterBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      filterNews('all');
+    });
+  }
+
+  const jumpMundialBtn = document.querySelector('[data-jump-cat="mundial"]');
+  if (jumpMundialBtn) {
+    jumpMundialBtn.addEventListener('click', () => filterNews('mundial'));
+  }
 
   // 4. MENÚ HAMBURGUESA
   const menuToggle = document.getElementById('menuToggle');
   const mainNav = document.getElementById('mainNav');
 
-  menuToggle.addEventListener('click', () => {
-    const abierto = mainNav.classList.toggle('is-open');
-    menuToggle.classList.toggle('active', abierto);
-    menuToggle.setAttribute('aria-expanded', abierto);
-    menuToggle.setAttribute('aria-label', abierto ? 'Cerrar menú' : 'Abrir menú');
-  });
-
-  mainNav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      mainNav.classList.remove('is-open');
-      menuToggle.classList.remove('active');
-      menuToggle.setAttribute('aria-expanded', 'false');
-      menuToggle.setAttribute('aria-label', 'Abrir menú');
+  if (menuToggle && mainNav) {
+    menuToggle.addEventListener('click', () => {
+      const abierto = mainNav.classList.toggle('is-open');
+      menuToggle.classList.toggle('active', abierto);
+      menuToggle.setAttribute('aria-expanded', abierto);
+      menuToggle.setAttribute('aria-label', abierto ? 'Cerrar menú' : 'Abrir menú');
     });
-  });
 
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-      mainNav.classList.remove('is-open');
-      menuToggle.classList.remove('active');
-      menuToggle.setAttribute('aria-expanded', 'false');
-    }
-  });
+    mainNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mainNav.classList.remove('is-open');
+        menuToggle.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Abrir menú');
+      });
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        mainNav.classList.remove('is-open');
+        menuToggle.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Abrir menú');
+      }
+    });
+  }
+
+  // 5. FORMULARIO DE CONTACTO POR CORREO (ENVÍO SIN SALIR DE LA PÁGINA)
+  const contactForm = document.getElementById('contactForm');
+  const formStatus = document.getElementById('formStatus');
+  const btnEnviar = document.getElementById('btnEnviar');
+  const replytoField = document.getElementById('replytoField');
+  const correoInput = document.getElementById('correo');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const actionUrl = contactForm.getAttribute('action');
+      if (!actionUrl || actionUrl.includes('TU_CORREO@ejemplo.com')) {
+        if (formStatus) {
+          formStatus.textContent = 'Configura primero tu correo real en el atributo action del formulario.';
+          formStatus.className = 'form-status error';
+        }
+        return;
+      }
+
+      if (replytoField && correoInput) {
+        replytoField.value = correoInput.value;
+      }
+
+      if (btnEnviar) {
+        btnEnviar.disabled = true;
+        btnEnviar.textContent = 'Enviando...';
+      }
+      if (formStatus) {
+        formStatus.textContent = '';
+        formStatus.className = 'form-status';
+      }
+
+      try {
+        const formData = new FormData(contactForm);
+        const ajaxUrl = actionUrl.replace('formsubmit.co/', 'formsubmit.co/ajax/');
+
+        const response = await fetch(ajaxUrl, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          if (formStatus) {
+            formStatus.textContent = '¡Mensaje enviado! Te responderemos pronto a tu correo.';
+            formStatus.className = 'form-status success';
+          }
+          contactForm.reset();
+        } else {
+          throw new Error('Error en la respuesta del servidor');
+        }
+      } catch (err) {
+        if (formStatus) {
+          formStatus.textContent = 'No se pudo enviar el mensaje. Inténtalo de nuevo o escríbenos por Facebook.';
+          formStatus.className = 'form-status error';
+        }
+      } finally {
+        if (btnEnviar) {
+          btnEnviar.disabled = false;
+          btnEnviar.innerHTML = 'Enviar mensaje por correo &rarr;';
+        }
+      }
+    });
+  }
+
+
+  
 </script>
-
 </body>
 </html>
