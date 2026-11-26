@@ -1,11 +1,16 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+section[id] {
+  scroll-margin-top: 85px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
@@ -81,33 +86,45 @@ body {
 .banner-slider {
   position: relative;
   width: 100%;
+  height: 620px;
   overflow: hidden;
   background-color: #0d0d0f;
 }
 
 .slides {
   display: flex;
-  transition: transform 0.55s ease-in-out;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease-in-out;
 }
 
 .slide {
-  min-width: 100%;
-  min-height: 620px; /* Antes estaba en 400px; súbelo o bájalo a tu gusto (ej. 580px - 720px) */
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  min-height: 620px;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   background-color: #18181f;
   display: flex;
 }
 
-
 .slide-overlay {
   width: 100%;
-  background: linear-gradient(90deg, rgba(10, 10, 13, 0.9) 0%, rgba(10, 10, 13, 0.6) 65%, rgba(225, 6, 0, 0.25) 100%);
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(10, 10, 13, 0.9) 0%,
+    rgba(10, 10, 13, 0.6) 65%,
+    rgba(225, 6, 0, 0.25) 100%
+  );
   display: flex;
   align-items: center;
   padding: 95px 0;
   color: #ffffff;
 }
+
 .hero-box {
   max-width: 650px;
 }
@@ -169,8 +186,13 @@ body {
   background-color: #e10600;
 }
 
-.slider-btn.prev { left: 16px; }
-.slider-btn.next { right: 16px; }
+.slider-btn.prev {
+  left: 16px;
+}
+
+.slider-btn.next {
+  right: 16px;
+}
 
 .slider-dots {
   position: absolute;
@@ -179,6 +201,7 @@ body {
   transform: translateX(-50%);
   display: flex;
   gap: 8px;
+  z-index: 10;
 }
 
 .dot {
@@ -353,13 +376,15 @@ body {
   margin-bottom: 22px;
 }
 
-.agenda-filters {
+.agenda-filters,
+.filtros {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
-.agenda-chip {
+.agenda-chip,
+.btn-filtro {
   background-color: #ffffff;
   color: #334155;
   border: 1px solid #cbd5e1;
@@ -372,24 +397,28 @@ body {
   transition: all 0.2s;
 }
 
-.agenda-chip:hover {
+.agenda-chip:hover,
+.btn-filtro:hover {
   border-color: #e10600;
   color: #e10600;
 }
 
-.agenda-chip.active {
+.agenda-chip.active,
+.btn-filtro.active {
   background-color: #e10600;
   color: #ffffff;
   border-color: #e10600;
 }
 
-.agenda-list {
+.agenda-list,
+.partidos-grid {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.match-row {
+.match-row,
+.tarjeta-partido {
   background-color: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 12px;
@@ -401,7 +430,8 @@ body {
   box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
 }
 
-.match-row.is-live {
+.match-row.is-live,
+.tarjeta-partido.live {
   border-left: 4px solid #e10600;
 }
 
@@ -411,7 +441,8 @@ body {
   gap: 4px;
 }
 
-.match-league {
+.match-league,
+.liga {
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -439,28 +470,46 @@ body {
   color: #64748b;
 }
 
-.match-teams {
+.match-teams,
+.marcador {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   gap: 14px;
 }
 
-.team-name {
+.team-name,
+.equipo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-weight: 700;
   color: #0f172a;
   font-size: 0.98rem;
 }
 
-.team-home {
+.team-home,
+.equipo:first-child {
+  justify-content: flex-end;
   text-align: right;
 }
 
-.team-away {
+.team-away,
+.equipo:last-child {
+  justify-content: flex-start;
   text-align: left;
 }
 
-.match-score-box {
+.equipo img,
+.team-name img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.match-score-box,
+.resultado {
   background-color: #0d0d0f;
   color: #ffffff;
   font-family: 'Anton', sans-serif;
@@ -481,7 +530,8 @@ body {
   font-weight: 700;
 }
 
-.match-channel {
+.match-channel,
+.estado-badge {
   font-size: 0.82rem;
   color: #475569;
   background-color: #f8fafc;
@@ -632,589 +682,111 @@ body {
 .news-content p {
   font-size: 0.86rem;
   color: #475569;
-  line-height: 1.4;}
-
-  
-/* --- SECCIÓN 1: BANNER MOVIBLE --- */
-
-.banner-slider {
-  position: relative;
-  width: 100%;
-  height: 620px;
-  overflow: hidden;
-  background-color: #0d0d0f;
+  line-height: 1.4;
 }
-
-.slides {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.8s ease-in-out;
-}
-
-.slide {
-  flex: 0 0 100%;
-  width: 100%;
-  height: 100%;
-  min-height: 620px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #18181f;
-  display: flex;
-}
-
-.slide-overlay {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    rgba(10, 10, 13, 0.9) 0%,
-    rgba(10, 10, 13, 0.6) 65%,
-    rgba(225, 6, 0, 0.25) 100%
-  );
-  display: flex;
-  align-items: center;
-  padding: 95px 0;
-  color: #ffffff;
-}
-
-.hero-box {
-  max-width: 650px;
-}
-
-.badge {
-  display: inline-block;
-  background-color: #e10600;
-  color: #ffffff;
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 4px;
-  margin-bottom: 12px;
-  letter-spacing: 1px;
-}
-
-.hero-box h1 {
-  font-family: 'Anton', sans-serif;
-  font-size: 2.5rem;
-  line-height: 1.15;
-  margin-bottom: 12px;
-}
-
-.hero-box p {
-  color: #e2e8f0;
-  font-size: 1rem;
-  margin-bottom: 22px;
-}
-
-.btn {
-  display: inline-block;
-  background-color: #e10600;
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 700;
-  padding: 10px 20px;
-  border-radius: 6px;
-}
-
-.btn:hover {
-  background-color: #c20500;
-}
-
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(13, 13, 15, 0.7);
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.slider-btn:hover {
-  background-color: #e10600;
-}
-
-.slider-btn.prev {
-  left: 16px;
-}
-
-.slider-btn.next {
-  right: 16px;
-}
-
-.slider-dots {
-  position: absolute;
-  bottom: 16px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-  z-index: 10;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: none;
-  background-color: rgba(255, 255, 255, 0.45);
-  cursor: pointer;
-}
-
-.dot.active {
-  background-color: #e10600;
-}
-
-
 
 /* ===================================
    MENU HAMBURGUESA
 =================================== */
-
 .menu-toggle {
-    display: none;
-    width: 44px;
-    height: 42px;
-    background: transparent;
-    border: 2px solid #e10600;
-    border-radius: 7px;
-    cursor: pointer;
-    padding: 8px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
+  display: none;
+  width: 44px;
+  height: 42px;
+  background: transparent;
+  border: 2px solid #e10600;
+  border-radius: 7px;
+  cursor: pointer;
+  padding: 8px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 
 .menu-toggle span {
-    display: block;
-    width: 24px;
-    height: 3px;
-    background: #fff;
-    border-radius: 3px;
-    transition: 0.3s;
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: #fff;
+  border-radius: 3px;
+  transition: 0.3s;
 }
 
 .menu-toggle.active span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
 }
 
 .menu-toggle.active span:nth-child(2) {
-    opacity: 0;
+  opacity: 0;
 }
 
 .menu-toggle.active span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 @media (max-width: 768px) {
+  .nosotros-grid,
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .header-flex {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: nowrap;
-    }
+  .nosotros-highlights {
+    grid-template-columns: 1fr;
+  }
 
-    .menu-toggle {
-        display: flex;
-        flex-shrink: 0;
-    }
+  .match-row,
+  .tarjeta-partido {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    text-align: center;
+  }
 
-    .nav {
-        display: none !important;
-        position: absolute;
-        top: calc(100% + 15px);
-        left: -20px;
-        right: -20px;
-        background: #0d0d0f;
-        border-top: 3px solid #e10600;
-        border-bottom: 3px solid #e10600;
-        padding: 12px 20px;
-        flex-direction: column;
-        gap: 0;
-        z-index: 9999;
-        box-shadow: 0 8px 18px rgba(0,0,0,.4);
-    }
+  .match-meta {
+    align-items: center;
+  }
 
-    .nav.is-open {
-        display: flex !important;
-    }
+  .header-flex {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
 
-    .nav a {
-        display: block;
-        padding: 15px 10px;
-        color: #fff;
-        border-bottom: 1px solid #292929;
-        font-size: 16px;
-    }
+  .menu-toggle {
+    display: flex;
+    flex-shrink: 0;
+  }
 
-    .nav a:last-child {
-        border-bottom: none;
-    }
+  .nav {
+    display: none !important;
+    position: absolute;
+    top: calc(100% + 15px);
+    left: -20px;
+    right: -20px;
+    background: #0d0d0f;
+    border-top: 3px solid #e10600;
+    border-bottom: 3px solid #e10600;
+    padding: 12px 20px;
+    flex-direction: column;
+    gap: 0;
+    z-index: 9999;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+  }
 
+  .nav.is-open {
+    display: flex !important;
+  }
+
+  .nav a {
+    display: block;
+    padding: 15px 10px;
+    color: #fff;
+    border-bottom: 1px solid #292929;
+    font-size: 16px;
+  }
+
+  .nav a:last-child {
+    border-bottom: none;
+  }
 }
-
-/* ==========================================
-   ADAPTACIÓN RESPONSIVE PARA CELULARES
-   FÚTBOL Y MÁS FÚTBOL
-========================================== */
-
-/* TABLETS Y CELULARES */
-@media (max-width: 768px) {
-
-    /* CONTENEDOR GENERAL */
-    .container {
-        width: 100%;
-        padding-left: 18px;
-        padding-right: 18px;
-    }
-
-    /* HEADER */
-    .header {
-        padding: 10px 0;
-    }
-
-    .logo-img {
-        width: 46px;
-        height: 46px;
-    }
-
-    .logo-name {
-        font-size: 1.15rem;
-    }
-
-    /* BANNER */
-    .banner-slider {
-        height: 480px;
-    }
-
-    .slide {
-        min-height: 480px;
-    }
-
-    .slide-overlay {
-        padding: 60px 0;
-        background: linear-gradient(
-            90deg,
-            rgba(10,10,13,.90),
-            rgba(10,10,13,.60)
-        );
-    }
-
-    .hero-box {
-        max-width: 100%;
-    }
-
-    .hero-box h1 {
-        font-size: 2rem;
-        line-height: 1.2;
-    }
-
-    .hero-box p {
-        font-size: .9rem;
-    }
-
-    /* NOSOTROS */
-    .section-nosotros {
-        padding: 55px 0;
-    }
-
-    .nosotros-grid {
-        grid-template-columns: 1fr;
-        gap: 28px;
-    }
-
-    .section-nosotros h2 {
-        font-size: 1.8rem;
-    }
-
-    .nosotros-highlights {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-
-    .nosotros-box {
-        padding: 20px;
-    }
-
-    /* AGENDA DEPORTIVA */
-    .agenda-section {
-        padding: 45px 0;
-    }
-
-    .agenda-top {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .agenda-top h2 {
-        font-size: 1.7rem;
-    }
-
-    .live-clock-box {
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    /* FILTROS */
-    .agenda-controls {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 18px;
-    }
-
-    .agenda-filters {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 9px;
-    }
-
-    .agenda-chip {
-        padding: 9px 13px;
-        font-size: .82rem;
-    }
-
-    /* TARJETAS DE PARTIDOS */
-    .match-row {
-        grid-template-columns: 1fr;
-        gap: 12px;
-        padding: 16px;
-        min-width: 0;
-    }
-
-    .match-meta {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .match-teams {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-        align-items: center;
-        gap: 8px;
-        width: 100%;
-        min-width: 0;
-    }
-
-    .team-name {
-        font-size: .88rem;
-        line-height: 1.3;
-        overflow-wrap: anywhere;
-    }
-
-    .team-home {
-        text-align: right;
-    }
-
-    .team-away {
-        text-align: left;
-    }
-
-    .match-score-box {
-        min-width: 70px;
-        padding: 7px 9px;
-        font-size: 1rem;
-    }
-
-    .match-score-box.upcoming-time {
-        min-width: 70px;
-        font-size: .82rem;
-    }
-
-    .match-channel {
-        white-space: normal;
-        text-align: center;
-        width: 100%;
-    }
-
-    /* NOTICIAS */
-    .news-section {
-        padding: 45px 0;
-    }
-
-    .news-header {
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .news-header h2 {
-        font-size: 1.3rem;
-    }
-
-    .news-tabs {
-        gap: 12px;
-        overflow-x: auto;
-        flex-wrap: nowrap;
-        padding-bottom: 5px;
-    }
-
-    .tab-btn {
-        white-space: nowrap;
-        font-size: .85rem;
-    }
-
-    .news-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .news-card {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .news-img-wrap {
-        width: 100%;
-        height: 200px;
-        min-width: 0;
-    }
-
-    .news-img-wrap img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .news-content {
-        width: 100%;
-        padding: 18px;
-    }
-
-    .news-content h3 {
-        font-size: 1rem;
-    }
-
-    /* PAGINACIÓN */
-    .news-pagination {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 12px;
-        margin-top: 20px;
-    }
-
-    /* FOOTER */
-    .footer-flex {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
-
-    .social-links {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-
-}
-
-/* CELULARES PEQUEÑOS */
-@media (max-width: 480px) {
-
-    .container {
-        padding-left: 14px;
-        padding-right: 14px;
-    }
-
-    /* LOGO */
-    .logo-name {
-        font-size: .95rem;
-        letter-spacing: .3px;
-    }
-
-    .logo-box {
-        gap: 8px;
-    }
-
-    /* BANNER */
-    .banner-slider,
-    .slide {
-        height: 430px;
-        min-height: 430px;
-    }
-
-    .hero-box h1 {
-        font-size: 1.7rem;
-    }
-
-    .hero-box p {
-        font-size: .85rem;
-    }
-
-    .slider-btn {
-        width: 34px;
-        height: 34px;
-    }
-
-    /* AGENDA */
-    .agenda-top h2 {
-        font-size: 1.5rem;
-    }
-
-    .agenda-chip {
-        font-size: .78rem;
-        padding: 8px 11px;
-    }
-
-    .match-row {
-        padding: 14px 11px;
-    }
-
-    .match-teams {
-        gap: 5px;
-    }
-
-    .team-name {
-        font-size: .79rem;
-    }
-
-    .match-score-box {
-        min-width: 62px;
-        font-size: .95rem;
-        padding: 7px 6px;
-    }
-
-    .match-score-box.upcoming-time {
-        min-width: 62px;
-        font-size: .76rem;
-    }
-
-    .match-league {
-        font-size: .7rem;
-    }
-
-    .match-status {
-        font-size: .75rem;
-    }
-
-    /* NOTICIAS */
-    .news-img-wrap {
-        height: 175px;
-    }
-
-    .news-header h2 {
-        font-size: 1.15rem;
-    }
-
-    .news-content {
-        padding: 15px;
-    }
-
-    /* FOOTER */
-    .footer {
-        padding: 25px 0;
-    }
-
-}
-
