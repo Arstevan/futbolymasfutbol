@@ -686,7 +686,7 @@ body {
 }
 
 /* ===================================
-   MENU HAMBURGUESA
+   MENU HAMBURGUESA Y RESPONSIVE
 =================================== */
 .menu-toggle {
   display: none;
@@ -724,13 +724,66 @@ body {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-@media (max-width: 768px) {
-  .nosotros-grid,
-  .news-grid {
+@media (max-width: 992px) {
+  .nosotros-grid {
     grid-template-columns: 1fr;
+    gap: 28px;
   }
 
-  .nosotros-highlights {
+  .match-row,
+  .tarjeta-partido {
+    grid-template-columns: 140px 1fr auto;
+    gap: 12px;
+    padding: 14px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 76px;
+  }
+
+  section[id] {
+    scroll-margin-top: 76px;
+  }
+
+  .logo-name {
+    font-size: 1.05rem;
+    letter-spacing: 0.4px;
+  }
+
+  .logo-img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .banner-slider,
+  .slide {
+    height: auto;
+    min-height: 430px;
+  }
+
+  .slide-overlay {
+    padding: 56px 0 48px;
+  }
+
+  .hero-box h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero-box p {
+    font-size: 0.92rem;
+    margin-bottom: 16px;
+  }
+
+  .section-nosotros,
+  .agenda-section,
+  .news-section {
+    padding: 44px 0;
+  }
+
+  .nosotros-highlights,
+  .news-grid {
     grid-template-columns: 1fr;
   }
 
@@ -738,11 +791,57 @@ body {
   .tarjeta-partido {
     grid-template-columns: 1fr;
     gap: 10px;
+    padding: 14px;
     text-align: center;
   }
 
   .match-meta {
     align-items: center;
+  }
+
+  .marcador {
+    grid-template-columns: 1fr auto 1fr;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .team-name,
+  .equipo {
+    font-size: 0.86rem;
+    gap: 6px;
+  }
+
+  .equipo img,
+  .team-name img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .match-score-box,
+  .resultado {
+    min-width: 68px;
+    padding: 5px 10px;
+    font-size: 0.95rem;
+  }
+
+  .match-channel,
+  .estado-badge {
+    justify-self: center;
+    white-space: normal;
+  }
+
+  .news-card {
+    flex-direction: column;
+  }
+
+  .news-img-wrap,
+  .news-content {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .news-img-wrap {
+    height: 180px;
   }
 
   .header-flex {
@@ -761,13 +860,13 @@ body {
   .nav {
     display: none !important;
     position: absolute;
-    top: calc(100% + 15px);
+    top: calc(100% + 12px);
     left: -20px;
     right: -20px;
     background: #0d0d0f;
     border-top: 3px solid #e10600;
     border-bottom: 3px solid #e10600;
-    padding: 12px 20px;
+    padding: 10px 20px;
     flex-direction: column;
     gap: 0;
     z-index: 9999;
@@ -780,7 +879,7 @@ body {
 
   .nav a {
     display: block;
-    padding: 15px 10px;
+    padding: 14px 10px;
     color: #fff;
     border-bottom: 1px solid #292929;
     font-size: 16px;
