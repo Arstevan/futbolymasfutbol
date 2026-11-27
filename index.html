@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<ht lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -35,15 +35,14 @@
       <span></span>
     </button>
 
-  
-   <!-- NAVEGACIÓN -->
-   <nav class="nav" id="mainNav">
+    <!-- NAVEGACIÓN -->
+    <nav class="nav" id="mainNav">
       <a href="#inicio">Inicio</a>
       <a href="#agenda">Agenda Deportiva</a>
       <a href="#noticias-futbol">Fútbol Colombiano</a>
       <a href="#junior-fc">Junior FC</a>
       <a href="#opinion">Opinión</a>
-       <a href="#contacto">Contacto</a>
+      <a href="#contacto">Contacto</a>
     </nav>
 
   </div>
@@ -96,8 +95,6 @@
   </div>
 </section>
 
-
-
 <!-- SECCIÓN 3: AGENDA DEPORTIVA EN TIEMPO REAL -->
 <section id="agenda" class="agenda-section">
   <div class="container agenda-container">
@@ -118,7 +115,6 @@
     <div id="lista-partidos" class="partidos-grid"></div>
   </div>
 </section>
-
 
 <!-- SECCIÓN 4: NOTICIAS DE FÚTBOL COLOMBIANO -->
 <section id="noticias-futbol" class="news-section">
@@ -146,7 +142,7 @@
           <span class="news-date">24 nov. 2026</span>
           <h3>Nacional ganó el Clásico Paisa 3-1 y es líder del Grupo A</h3>
           <p>Repasamos los resultados de la jornada, los equipos clasificados y los duelos directos en la parte alta de la tabla de cuadrangulares...</p>
-          <a href="#" class="read-more">Leer noticia &rarr;</a>
+          <a href="#" class="read-more" data-id="noticia-1">Leer noticia &rarr;</a>
         </div>
       </article>
 
@@ -160,7 +156,7 @@
           <span class="news-date">23 nov. 2026</span>
           <h3>Millonarios no tuvo piedad y goleó al Bucaramanga en El Campín</h3>
           <p>Con este triunfo, el conjunto embajador llega a 4 puntos y lidera el Grupo B. Bucaramanga queda en el fondo con 1 punto...</p>
-          <a href="#" class="read-more">Leer noticia &rarr;</a>
+          <a href="#" class="read-more" data-id="noticia-2">Leer noticia &rarr;</a>
         </div>
       </article>
 
@@ -174,7 +170,7 @@
           <span class="news-date">21 nov. 2026</span>
           <h3>Actualidad de los referentes de la Selección Colombia</h3>
           <p>Seguimiento al presente de los convocados y figuras de la Tricolor en sus clubes y en el radar del cuerpo técnico...</p>
-          <a href="#" class="read-more">Leer noticia &rarr;</a>
+          <a href="#" class="read-more" data-id="noticia-3">Leer noticia &rarr;</a>
         </div>
       </article>
 
@@ -188,11 +184,9 @@
           <span class="news-date">19 nov. 2026</span>
           <h3>Pulso al rojo vivo en la pelea por los primeros lugares</h3>
           <p>Analizamos cómo marcha la lucha punto a punto en el campeonato colombiano tras una fecha decisiva...</p>
-          <a href="#" class="read-more">Leer noticia &rarr;</a>
+          <a href="#" class="read-more" data-id="noticia-4">Leer noticia &rarr;</a>
         </div>
       </article>
-
-      
 
     </div>
 
@@ -210,9 +204,21 @@
   </div>
 </section>
 
+<!-- VENTANA MODAL PARA LEER LA NOTICIA COMPLETA -->
+<div id="newsModal" class="news-modal-overlay">
+  <div class="news-modal-box">
+    <button type="button" id="closeNewsModal" class="news-modal-close" aria-label="Cerrar">&times;</button>
+    <div class="news-modal-header">
+      <span id="modalBadge" class="pill-badge">Liga BetPlay</span>
+      <span id="modalDate" class="news-date"></span>
+    </div>
+    <h2 id="modalTitle"></h2>
+    <img id="modalImg" src="" alt="Imagen de la noticia">
+    <div id="modalBody" class="news-modal-body"></div>
+  </div>
+</div>
 
-
-<<!-- SECCIÓN 4: NOTICIAS DEL JUNIOR FC -->
+<!-- SECCIÓN 5: NOTICIAS DEL JUNIOR FC -->
 <section id="junior-fc" class="news-section">
   <div class="container">
 
@@ -226,19 +232,19 @@
     </div>
 
     <!-- GRILLA DE 4 NOTICIAS -->
-    <div class="news-grid" id="newsGrid">
+    <div class="news-grid" id="juniorNewsGrid">
 
       <!-- TARJETA 1 -->
       <article class="news-card">
         <div class="news-img-wrap">
           <span class="pill-badge badge-liga">Junior de Barranquilla</span>
-          <img src="IMAGENES/junio_entrenamientor.jpg" alt="Clásico Paisa Liga BetPlay" loading="lazy" onerror="this.src='IMAGENES/junio_entrenamientor.jpg'">
+          <img src="IMAGENES/junio_entrenamientor.jpg" alt="Entrenamientos Junior FC" loading="lazy" onerror="this.src='IMAGENES/junio_entrenamientor.jpg'">
         </div>
         <div class="news-content">
           <span class="news-date">24 nov. 2026</span>
-          <h3>Nacional ganó el Clásico Paisa 3-1 y es líder del Grupo A</h3>
-          <p>Repasamos los resultados de la jornada, los equipos clasificados y los duelos directos en la parte alta de la tabla de cuadrangulares...</p>
-          <a href="#" class="read-more">Leer noticia &rarr;</a>
+          <h3>Entrenamientos y preparación de Junior de Barranquilla</h3>
+          <p>Actualidad de las prácticas del plantel tiburón y ajustes tácticos pensando en el próximo reto...</p>
+          <a href="#" class="read-more" data-id="junior-1">Leer noticia &rarr;</a>
         </div>
       </article>
 
@@ -246,13 +252,13 @@
       <article class="news-card">
         <div class="news-img-wrap">
           <span class="pill-badge badge-liga">Junior de Barranquilla</span>
-          <img src="IMAGENES/noticia2.jpg" alt="Millonarios vs Bucaramanga" loading="lazy" onerror="this.src='IMAGENES/junior_juvenil.jpg'">
+          <img src="IMAGENES/junior_juvenil.jpg" alt="Cantera Junior FC" loading="lazy" onerror="this.src='IMAGENES/junior_juvenil.jpg'">
         </div>
         <div class="news-content">
           <span class="news-date">23 nov. 2026</span>
-          <h3>Millonarios no tuvo piedad y goleó al Bucaramanga en El Campín</h3>
-          <p>Con este triunfo, el conjunto embajador llega a 4 puntos y lidera el Grupo B. Bucaramanga queda en el fondo con 1 punto...</p>
-          <a href="#" class="read-more">Leer noticia &rarr;</a>
+          <h3>Cantera y procesos juveniles en Junior FC</h3>
+          <p>Seguimiento a los juveniles y promesas que buscan ganarse un lugar en el equipo profesional...</p>
+          <a href="#" class="read-more" data-id="junior-2">Leer noticia &rarr;</a>
         </div>
       </article>
 
@@ -260,13 +266,13 @@
       <article class="news-card">
         <div class="news-img-wrap">
           <span class="pill-badge badge-seleccion">Junior de Barranquilla</span>
-          <img src="IMAGENES/noticia3.jpg" alt="Selección Colombia" loading="lazy" onerror="this.src='IMAGENES/teo.jpg'">
+          <img src="IMAGENES/teo.jpg" alt="Plantel Junior FC" loading="lazy" onerror="this.src='IMAGENES/teo.jpg'">
         </div>
         <div class="news-content">
           <span class="news-date">21 nov. 2026</span>
-          <h3>Actualidad de los referentes de la Selección Colombia</h3>
-          <p>Seguimiento al presente de los convocados y figuras de la Tricolor en sus clubes y en el radar del cuerpo técnico...</p>
-          <a href="#" class="read-more">Leer noticia &rarr;</a>
+          <h3>Análisis y novedades alrededor del plantel rojiblanco</h3>
+          <p>Repaso de las novedades del grupo, bajas, regresos y temas del día a día en Barranquilla...</p>
+          <a href="#" class="read-more" data-id="junior-3">Leer noticia &rarr;</a>
         </div>
       </article>
 
@@ -274,23 +280,21 @@
       <article class="news-card">
         <div class="news-img-wrap">
           <span class="pill-badge badge-junior">Junior de Barranquilla</span>
-          <img src="IMAGENES/noticia4.jpg" alt="Junior de Barranquilla" loading="lazy" onerror="this.src='IMAGENES/jorge_bava.jpg'">
+          <img src="IMAGENES/jorge_bava.jpg" alt="Cuerpo técnico Junior FC" loading="lazy" onerror="this.src='IMAGENES/jorge_bava.jpg'">
         </div>
         <div class="news-content">
           <span class="news-date">19 nov. 2026</span>
-          <h3>Pulso al rojo vivo en la pelea por los primeros lugares</h3>
-          <p>Analizamos cómo marcha la lucha punto a punto en el campeonato colombiano tras una fecha decisiva...</p>
-          <a href="#" class="read-more">Leer noticia &rarr;</a>
+          <h3>Cuerpo técnico y planificación en Junior FC</h3>
+          <p>Detalles de la planificación del cuerpo técnico y los objetivos en la competencia...</p>
+          <a href="#" class="read-more" data-id="junior-4">Leer noticia &rarr;</a>
         </div>
       </article>
-
-      
 
     </div>
 
     <!-- PIE / CONTADOR -->
     <div class="news-pagination">
-      <span id="newsCount">1 - 4 de 4</span>
+      <span id="juniorNewsCount">1 - 4 de 4</span>
       <div class="page-controls">
         <button type="button" disabled aria-label="Primera página">|&lt;</button>
         <button type="button" disabled aria-label="Anterior">&lt;</button>
@@ -466,8 +470,6 @@
         </button>
 
         <div class="form-status" id="formStatus" aria-live="polite" hidden></div>
-
-        <p class="form-status" id="formStatus" aria-live="polite"></p>
 
         <input type="hidden" name="_replyto" id="replytoField">
       </form>
@@ -748,110 +750,161 @@
     });
   }
 
-  const jumpMundialBtn = document.querySelector('[data-jump-cat="mundial"]');
-  if (jumpMundialBtn) {
-    jumpMundialBtn.addEventListener('click', () => filterNews('mundial'));
+// 4. MODAL PARA LEER NOTICIA COMPLETA
+  const NOTICIAS_DATA = {
+    "noticia-1": {
+      badge: "Liga BetPlay",
+      date: "24 nov. 2026",
+      title: "Nacional ganó el Clásico Paisa 3-1 y es líder del Grupo A",
+      img: "IMAGENES/nacional.jpg",
+      body: `
+        <p>Atlético Nacional se impuso 3-1 en el Clásico Paisa y asumió el liderato del Grupo A en los cuadrangulares semifinales de la Liga BetPlay.</p>
+        <p>El equipo verdolaga golpeó en momentos clave del compromiso, supo manejar los tiempos tras ponerse en ventaja y capitalizó los espacios que dejó el rival en busca del empate.</p>
+        <p>Con este resultado, la zona queda al rojo vivo de cara a las próximas fechas, donde cada punto y la diferencia de gol pueden ser determinantes para avanzar a la gran final.</p>
+      `
+    },
+    "noticia-2": {
+      badge: "Liga BetPlay",
+      date: "23 nov. 2026",
+      title: "Millonarios no tuvo piedad y goleó al Bucaramanga en El Campín",
+      img: "IMAGENES/millonarios.jp",
+      body: `
+        <p>Con este triunfo, el conjunto embajador llega a 4 puntos y lidera el Grupo B. Bucaramanga queda en el fondo con 1 punto.</p>
+        <p>Millonarios impuso condiciones desde el arranque en El Campín, con intensidad en la presión alta y contundencia en los metros finales para marcar la diferencia en el marcador.</p>
+        <p>La victoria le da aire al equipo bogotano en la pelea por el cupo a la final y obliga a Bucaramanga a reaccionar de inmediato en la siguiente jornada.</p>
+      `
+    },
+    "noticia-3": {
+      badge: "Selección Colombia",
+      date: "21 nov. 2026",
+      title: "Actualidad de los referentes de la Selección Colombia",
+      img: "IMAGENES/cali.jpg",
+      body: `
+        <p>Seguimiento al presente de los convocados y figuras de la Tricolor en sus clubes y en el radar del cuerpo técnico.</p>
+        <p>Varios habituales en las convocatorias vienen sumando minutos importantes, participando en jugadas de gol y sosteniendo ritmo competitivo en sus respectivas ligas.</p>
+        <p>El cuerpo técnico sigue de cerca el estado físico, las cargas de partidos y el nivel de cada futbolista para tomar decisiones con el grupo completo.</p>
+      `
+    },
+    "noticia-4": {
+      badge: "Liga BetPlay",
+      date: "19 nov. 2026",
+      title: "Pulso al rojo vivo en la pelea por los primeros lugares",
+      img: "IMAGENES/santa fe.jpg",
+      body: `
+        <p>Analizamos cómo marcha la lucha punto a punto en el campeonato colombiano tras una fecha decisiva.</p>
+        <p>La paridad en las posiciones mantiene a varios clubes con opciones reales, donde un acierto en arco rival o un error puntual cambia el panorama de cada grupo.</p>
+        <p>Con el calendario apretado, la administración de la plantilla y la efectividad serán claves en el tramo definitivo.</p>
+      `
+    },
+    "junior-1": {
+      badge: "Junior de Barranquilla",
+      date: "24 nov. 2026",
+      title: "Entrenamientos y preparación de Junior de Barranquilla",
+      img: "IMAGENES/junio_entrenamientor.jpg",
+      body: `
+        <p>Actualidad de las prácticas del plantel tiburón y ajustes tácticos pensando en el próximo reto.</p>
+        <p>El grupo trabajó aspectos de transiciones, salida limpia y definición, afinando detalles en la pizarra para llegar en óptimas condiciones al siguiente compromiso.</p>
+      `
+    },
+    "junior-2": {
+      badge: "Junior de Barranquilla",
+      date: "23 nov. 2026",
+      title: "Cantera y procesos juveniles en Junior FC",
+      img: "IMAGENES/junior_juvenil.jpg",
+      body: `
+        <p>Seguimiento a los juveniles y promesas que buscan ganarse un lugar en el equipo profesional.</p>
+        <p>El trabajo formativo en Barranquilla continúa aportando variantes y proyección, con jugadores jóvenes sumando experiencia y roce competitivo.</p>
+      `
+    },
+    "junior-3": {
+      badge: "Junior de Barranquilla",
+      date: "21 nov. 2026",
+      title: "Análisis y novedades alrededor del plantel rojiblanco",
+      img: "IMAGENES/teo.jpg",
+      body: `
+        <p>Repaso de las novedades del grupo, bajas, regresos y temas del día a día en Barranquilla.</p>
+        <p>La actualidad del vestuario rojiblanco pasa por recuperar efectivos, mantener la concentración y sostener el respaldo de la hinchada.</p>
+      `
+    },
+    "junior-4": {
+      badge: "Junior de Barranquilla",
+      date: "19 nov. 2026",
+      title: "Cuerpo técnico y planificación en Junior FC",
+      img: "IMAGENES/jorge_bava.jpg",
+      body: `
+        <p>Detalles de la planificación del cuerpo técnico y los objetivos en la competencia.</p>
+        <p>La preparación se enfoca en corregir detalles puntuales, potenciar las virtudes del equipo y afrontar cada partido como una final.</p>
+      `
+    }
+  };
+
+  const newsModal = document.getElementById("newsModal");
+  const closeNewsModal = document.getElementById("closeNewsModal");
+  const modalBadge = document.getElementById("modalBadge");
+  const modalDate = document.getElementById("modalDate");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalImg = document.getElementById("modalImg");
+  const modalBody = document.getElementById("modalBody");
+
+  function abrirNoticiaModal(id, tarjetaFallback) {
+    if (!newsModal) return;
+
+    const data = NOTICIAS_DATA[id];
+    if (data) {
+      modalBadge.textContent = data.badge;
+      modalDate.textContent = data.date;
+      modalTitle.textContent = data.title;
+      modalImg.src = data.img;
+      modalImg.alt = data.title;
+      modalBody.innerHTML = data.body;
+    } else if (tarjetaFallback) {
+      const badgeEl = tarjetaFallback.querySelector(".pill-badge");
+      const dateEl = tarjetaFallback.querySelector(".news-date");
+      const titleEl = tarjetaFallback.querySelector("h3");
+      const descEl = tarjetaFallback.querySelector("p");
+      const imgEl = tarjetaFallback.querySelector(".news-img-wrap img");
+
+      modalBadge.textContent = badgeEl ? badgeEl.textContent.trim() : "Fútbol";
+      modalDate.textContent = dateEl ? dateEl.textContent.trim() : "";
+      modalTitle.textContent = titleEl ? titleEl.textContent.trim() : "Noticia";
+      modalImg.src = imgEl ? imgEl.currentSrc || imgEl.src : "";
+      modalImg.alt = modalTitle.textContent;
+      modalBody.innerHTML = `<p>${descEl ? descEl.textContent.trim() : ""}</p>`;
+    }
+
+    newsModal.classList.add("open", "active", "show");
+    newsModal.style.setProperty("display", "flex", "important");
   }
 
-  // 4. MENÚ HAMBURGUESA
-  const menuToggle = document.getElementById('menuToggle');
-  const mainNav = document.getElementById('mainNav');
+  function cerrarNoticiaModal() {
+    if (!newsModal) return;
+    newsModal.classList.remove("open", "active", "show");
+    newsModal.style.removeProperty("display");
+  }
 
-  if (menuToggle && mainNav) {
-    menuToggle.addEventListener('click', () => {
-      const abierto = mainNav.classList.toggle('is-open');
-      menuToggle.classList.toggle('active', abierto);
-      menuToggle.setAttribute('aria-expanded', abierto);
-      menuToggle.setAttribute('aria-label', abierto ? 'Cerrar menú' : 'Abrir menú');
-    });
+  document.addEventListener("click", (e) => {
+    const link = e.target.closest(".read-more");
+    if (!link) return;
+    e.preventDefault();
+    const card = link.closest(".news-card");
+    abrirNoticiaModal(link.dataset.id, card);
+  });
 
-    mainNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mainNav.classList.remove('is-open');
-        menuToggle.classList.remove('active');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        menuToggle.setAttribute('aria-label', 'Abrir menú');
-      });
-    });
+  if (closeNewsModal) {
+    closeNewsModal.addEventListener("click", cerrarNoticiaModal);
+  }
 
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') {
-        mainNav.classList.remove('is-open');
-        menuToggle.classList.remove('active');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        menuToggle.setAttribute('aria-label', 'Abrir menú');
-      }
+  if (newsModal) {
+    newsModal.addEventListener("click", (e) => {
+      if (e.target === newsModal) cerrarNoticiaModal();
     });
   }
 
-  // 5. FORMULARIO DE CONTACTO POR CORREO (ENVÍO SIN SALIR DE LA PÁGINA)
-  const contactForm = document.getElementById('contactForm');
-  const formStatus = document.getElementById('formStatus');
-  const btnEnviar = document.getElementById('btnEnviar');
-  const replytoField = document.getElementById('replytoField');
-  const correoInput = document.getElementById('correo');
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") cerrarNoticiaModal();
+  });
+</script>
 
-  if (contactForm) {
-    contactForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
-
-      const actionUrl = contactForm.getAttribute('action');
-      if (!actionUrl || actionUrl.includes('TU_CORREO@ejemplo.com')) {
-        if (formStatus) {
-          formStatus.textContent = 'Configura primero tu correo real en el atributo action del formulario.';
-          formStatus.className = 'form-status error';
-        }
-        return;
-      }
-
-      if (replytoField && correoInput) {
-        replytoField.value = correoInput.value;
-      }
-
-      if (btnEnviar) {
-        btnEnviar.disabled = true;
-        btnEnviar.textContent = 'Enviando...';
-      }
-      if (formStatus) {
-        formStatus.textContent = '';
-        formStatus.className = 'form-status';
-      }
-
-      try {
-        const formData = new FormData(contactForm);
-        const ajaxUrl = actionUrl.replace('formsubmit.co/', 'formsubmit.co/ajax/');
-
-        const response = await fetch(ajaxUrl, {
-          method: 'POST',
-          body: formData,
-          headers: { 'Accept': 'application/json' }
-        });
-
-        if (response.ok) {
-          if (formStatus) {
-            formStatus.textContent = '¡Mensaje enviado! Te responderemos pronto a tu correo.';
-            formStatus.className = 'form-status success';
-          }
-          contactForm.reset();
-        } else {
-          throw new Error('Error en la respuesta del servidor');
-        }
-      } catch (err) {
-        if (formStatus) {
-          formStatus.textContent = 'No se pudo enviar el mensaje. Inténtalo de nuevo o escríbenos por Facebook.';
-          formStatus.className = 'form-status error';
-        }
-      } finally {
-        if (btnEnviar) {
-          btnEnviar.disabled = false;
-          btnEnviar.innerHTML = 'Enviar mensaje por correo &rarr;';
-        }
-      }
-    });
-  }
-
-
-  
 </script>
 </body>
 </html>
