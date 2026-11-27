@@ -1,4 +1,3 @@
-
 html {
   scroll-behavior: smooth;
 }
@@ -222,97 +221,7 @@ body {
   background-color: #e10600;
 }
 
-/* --- SECCIÓN 2: NOSOTROS --- */
-.section-nosotros {
-  background-color: #ffffff;
-  border-bottom: 1px solid #e2e8f0;
-  padding: 84px 0;
-}
 
-.nosotros-grid {
-  display: grid;
-  grid-template-columns: 1.45fr 1fr;
-  gap: 44px;
-  align-items: start;
-}
-
-.tag-red {
-  display: inline-block;
-  color: #e10600;
-  font-weight: 700;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-  margin-bottom: 6px;
-}
-
-.section-nosotros h2 {
-  font-family: 'Anton', sans-serif;
-  font-size: 2.15rem;
-  line-height: 1.15;
-  color: #0f172a;
-  margin: 4px 0 18px;
-}
-
-.section-nosotros p {
-  color: #475569;
-  font-size: 1rem;
-  line-height: 1.7;
-  margin-bottom: 16px;
-}
-
-.nosotros-highlights {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  margin-top: 28px;
-}
-
-.highlight-item {
-  background-color: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  padding: 16px;
-}
-
-.highlight-item strong {
-  display: block;
-  font-size: 1.05rem;
-  color: #0f172a;
-  margin-bottom: 4px;
-}
-
-.highlight-item span {
-  font-size: 0.85rem;
-  color: #64748b;
-}
-
-.nosotros-box {
-  background-color: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-left: 4px solid #e10600;
-  border-radius: 12px;
-  padding: 26px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.nosotros-box div {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.nosotros-box strong {
-  color: #0f172a;
-  font-size: 1rem;
-}
-
-.nosotros-box span {
-  color: #64748b;
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
 
 /* --- SECCIÓN 3: AGENDA DEPORTIVA --- */
 .agenda-section {
@@ -690,6 +599,96 @@ body {
   line-height: 1.4;
 }
 
+/* --- MODAL DE NOTICIAS --- */
+.news-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.news-modal-overlay.open,
+.news-modal-overlay.active,
+.news-modal-overlay.show {
+  display: flex;
+}
+
+.news-modal-box {
+  background: #ffffff;
+  max-width: 720px;
+  width: 100%;
+  max-height: 88vh;
+  overflow-y: auto;
+  border-radius: 12px;
+  padding: 28px 32px;
+  position: relative;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+  animation: fadeInModal 0.25s ease;
+}
+
+@keyframes fadeInModal {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.news-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: #f1f1f1;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 24px;
+  line-height: 1;
+  color: #111;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.news-modal-close:hover {
+  background: #e10600;
+  color: #fff;
+}
+
+.news-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.news-modal-header .pill-badge {
+  position: static;
+}
+
+#modalTitle {
+  font-size: 1.6rem;
+  color: #111;
+  margin: 0 0 16px 0;
+  line-height: 1.3;
+}
+
+#modalImg {
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.news-modal-body p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 14px;
+}
+
 /* ===================================
    MENU HAMBURGUESA Y RESPONSIVE
 =================================== */
@@ -1017,6 +1016,7 @@ html {
   font-weight: 700;
   color: var(--dark-bg);
   display: -webkit-box;
+  line-clamp: 2;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -1029,6 +1029,7 @@ html {
   color: #4b5563;
   flex-grow: 1;
   display: -webkit-box;
+  line-clamp: 3;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -1747,4 +1748,14 @@ html {
   color: #7f1d1d;
   border: 1px solid #fca5a5;
   border-left: 4px solid var(--contact-red);
+}
+
+#modalImg {
+  width: 100%;
+  max-height: 360px;
+  object-fit: contain;
+  object-position: center;
+  background-color: #0d0d0f;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
