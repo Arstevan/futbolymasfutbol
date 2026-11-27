@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<ht lang="es">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -546,6 +546,27 @@
 
 <!-- JAVASCRIPT -->
 <script>
+  // 0. MENÚ HAMBURGUESA (MÓVIL)
+  const menuToggle = document.getElementById('menuToggle');
+  const mainNav = document.getElementById('mainNav');
+
+  if (menuToggle && mainNav) {
+    menuToggle.addEventListener('click', () => {
+      const estaAbierto = mainNav.classList.toggle('active');
+      mainNav.classList.toggle('open', estaAbierto);
+      menuToggle.classList.toggle('active', estaAbierto);
+      menuToggle.setAttribute('aria-expanded', String(estaAbierto));
+    });
+
+    mainNav.querySelectorAll('a').forEach((enlace) => {
+      enlace.addEventListener('click', () => {
+        mainNav.classList.remove('active', 'open');
+        menuToggle.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
   // 1. CARRUSEL DEL BANNER
   const slides = document.getElementById('slides');
   const dots = document.querySelectorAll('.dot');
@@ -750,7 +771,7 @@
     });
   }
 
-// 4. MODAL PARA LEER NOTICIA COMPLETA
+  // 4. MODAL PARA LEER NOTICIA COMPLETA
   const NOTICIAS_DATA = {
     "noticia-1": {
       badge: "Liga BetPlay",
@@ -767,7 +788,7 @@
       badge: "Liga BetPlay",
       date: "23 nov. 2026",
       title: "Millonarios no tuvo piedad y goleó al Bucaramanga en El Campín",
-      img: "IMAGENES/millonarios.jp",
+      img: "IMAGENES/noticia2.jpg",
       body: `
         <p>Con este triunfo, el conjunto embajador llega a 4 puntos y lidera el Grupo B. Bucaramanga queda en el fondo con 1 punto.</p>
         <p>Millonarios impuso condiciones desde el arranque en El Campín, con intensidad en la presión alta y contundencia en los metros finales para marcar la diferencia en el marcador.</p>
@@ -778,7 +799,7 @@
       badge: "Selección Colombia",
       date: "21 nov. 2026",
       title: "Actualidad de los referentes de la Selección Colombia",
-      img: "IMAGENES/cali.jpg",
+      img: "IMAGENES/noticia3.jpg",
       body: `
         <p>Seguimiento al presente de los convocados y figuras de la Tricolor en sus clubes y en el radar del cuerpo técnico.</p>
         <p>Varios habituales en las convocatorias vienen sumando minutos importantes, participando en jugadas de gol y sosteniendo ritmo competitivo en sus respectivas ligas.</p>
@@ -789,7 +810,7 @@
       badge: "Liga BetPlay",
       date: "19 nov. 2026",
       title: "Pulso al rojo vivo en la pelea por los primeros lugares",
-      img: "IMAGENES/santa fe.jpg",
+      img: "IMAGENES/noticia4.jpg",
       body: `
         <p>Analizamos cómo marcha la lucha punto a punto en el campeonato colombiano tras una fecha decisiva.</p>
         <p>La paridad en las posiciones mantiene a varios clubes con opciones reales, donde un acierto en arco rival o un error puntual cambia el panorama de cada grupo.</p>
@@ -903,8 +924,6 @@
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") cerrarNoticiaModal();
   });
-</script>
-
 </script>
 </body>
 </html>
